@@ -3,6 +3,7 @@ import Navbar from "./components/navbar";
 import Home from "./pages/home";
 import About from "./pages/about";
 import Project from "./pages/project";
+import Experience from "./pages/experience";
 
 
 export default function App(){
@@ -12,6 +13,7 @@ export default function App(){
       <Home/>
       <About/>
       <Project/>
+      <Experience/>
     </Container>
   )
 }
