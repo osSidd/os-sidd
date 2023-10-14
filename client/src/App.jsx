@@ -4,6 +4,8 @@ import Home from "./pages/home";
 import About from "./pages/about";
 import Project from "./pages/project";
 import Experience from "./pages/experience";
+import Contact from "./pages/contact";
+import Footer from "./components/footer";
 
 
 export default function App(){
@@ -14,6 +16,8 @@ export default function App(){
       <About/>
       <Project/>
       <Experience/>
+      <Contact/>
+      <Footer/>
     </Container>
   )
 }
