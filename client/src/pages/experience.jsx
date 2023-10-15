@@ -29,6 +29,9 @@ export default function Experience(){
                                 Worked with the design team to update the ui whenever the a change came across while working on proer website.
                             </ListItem>
                             <ListItem sx={listItemProp}>
+                                Worked on the about section of Infoceleria.com
+                            </ListItem>
+                            <ListItem sx={listItemProp}>
                                 Designed the dashboards of proer app using React, D3.Js and MUI.
                             </ListItem>
                         </List>
