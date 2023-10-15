@@ -2,14 +2,13 @@ import proer from '../assets/proer.png'
 import apify from '../assets/apify.png'
 
 import {Box, Chip, Container, Grid, Stack, Typography} from '@mui/material'
+import SubHeading from '../components/subHeading'
 
 export default function Project(){
     return (
-        <Container maxWidth="xl" sx={{minHeight:'90vh', display:'flex', alignItems:'center'}}>
+        <Container id="projects" maxWidth="xl" sx={{minHeight:'90vh', display:'flex', alignItems:'center'}}>
             <Box width="100%">
-                <Typography variant='h2' mb={4}>
-                    Projects
-                </Typography>
+               <SubHeading title='Projects'/>
                 <Box my={32 } sx={{display:'flex', alignItems:'center', justifyContent: 'space-between'}}>
                     <Box>
                         <Typography variant='h4'>Proer Website</Typography>

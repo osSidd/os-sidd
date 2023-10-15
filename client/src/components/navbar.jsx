@@ -34,7 +34,7 @@ export default function Navbar(){
             width:'90%', 
         }   
     }
-
+// Implement smooth scrolling with given duration using js
     return(
         <AppBar sx={{bgcolor:'#fefefe', mt:2}} elevation={false} position='static'>
             <Container maxWidth="xl">
@@ -47,14 +47,15 @@ export default function Navbar(){
                     <Box ml='auto'>
                         {
                             pages.map(page => (
-                                <Button key={page} sx={[btnProps, linksProps]}>
+                                <Button key={page} href={`#${page}`} sx={[btnProps, linksProps]}>
                                     {page}
                                 </Button>
                             ))
                         }
                         <Button 
-                            variant='outlined' 
-                            sx={{...btnProps, borderWidth:2, borderColor:'#555', "&:hover":{borderWidth:2, backgroundColor:'#fefefe', borderColor:'#34c', color:"#34c"}}}
+                            variant='outlined'
+                            href='#contact' 
+                            sx={{...btnProps, borderWidth:2, borderColor:'#555', "&:hover":{borderWidth:2, backgroundColor:'teal', borderColor:'#34c', color:"#fefefe"}}}
                         >
                             get in touch
                         </Button>
