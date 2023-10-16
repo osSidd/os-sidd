@@ -55,9 +55,9 @@ export default function Navbar(){
                         <Button 
                             variant='outlined'
                             href='#contact' 
-                            sx={{...btnProps, borderWidth:2, borderColor:'#555', "&:hover":{borderWidth:2, backgroundColor:'teal', borderColor:'#34c', color:"#fefefe"}}}
+                            sx={{...btnProps, borderWidth:2, borderColor:'#555', "&:hover":{borderWidth:2, backgroundColor:'#34c', borderColor:'#34c', color:"#fefefe"}}}
                         >
-                            get in touch
+                            contact me
                         </Button>
                     </Box>
                 </Toolbar>

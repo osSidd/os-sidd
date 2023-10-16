@@ -1,4 +1,5 @@
-import { Box, Button, ButtonGroup, Container, Grid, Typography } from "@mui/material";
+import { Box, Button, Container, Grid, Typography } from "@mui/material";
+import HeroImg from '../assets/heroImg.jpg'
 
 export default function Home(){
 
@@ -23,7 +24,7 @@ export default function Home(){
     return(
         <Container id="home" maxWidth="xl" sx={{minHeight:'90vh', display:'flex', alignItems:'center'}}>
             <Grid container>
-                <Grid item md={7}>
+                <Grid item md={7} alignSelf='center'>
                     <Typography variant="h2" sx={{color:'#555'}} mb={-1}>
                         Hey, I'm
                     </Typography>
@@ -34,11 +35,17 @@ export default function Home(){
                         I am a self taught MERN stack developer. I am mostly interested in API development and integration using RESTFUL approach and GraphQL.
                     </Typography>
                     <Box mt={4}>
-                        <Button size="large" variant="contained" sx={{...btnProps, bgcolor:'#555'}}>learn more</Button>
-                        <Button size="large" variant="outlined" sx={[btnProps, outlinedBtn]}>contact me</Button>
+                        <Button href="#about" size="large" variant="contained" sx={{...btnProps, bgcolor:'#555'}}>learn more</Button>
+                        <Button href="#contact" size="large" variant="outlined" sx={[btnProps, outlinedBtn]}>contact me</Button>
                     </Box>
                 </Grid>
-                <Grid item md={5}></Grid>
+                <Grid item md={5} alignSelf='center'>
+                    <Box
+                        component='img'
+                        src={HeroImg}
+                        width={475}
+                    />
+                </Grid>
             </Grid>
         </Container>
     )

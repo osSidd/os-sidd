@@ -1,6 +1,8 @@
-import { Box, Container, Grid, Typography} from "@mui/material";
+import {Box, Container, Grid, Typography} from "@mui/material";
 import AboutTabs from "../components/about/tabs";
 import SubHeading from "../components/subHeading";
+
+import AboutImg from '../assets/aboutImg.webp'
 
 export default function About(){
 
@@ -8,12 +10,17 @@ export default function About(){
         <Container id="about" maxWidth="xl" sx={{minHeight:'90vh', display:'flex', alignItems:'center'}}>
             <Grid container>
                 <Grid item md={4}>
-                   <div></div>
+                   <Box
+                    component="img"
+                    src={AboutImg}
+                    width={250}
+                    mt={12}
+                   />
                 </Grid>
                 <Grid item md={8}>
                     <SubHeading title='About me' />
-                    <Typography>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta tempora, fugit sunt consequuntur maxime, omnis sequi tenetur odio, ducimus quia magni. Sequi cum illo numquam earum fugit aliquid minus perferendis!
+                    <Typography mb={2}>
+                        Hello!, I am Osama, a developer based in Kolkata, West Bengal. I like to create web applications that are secure, performant and device agnostic.
                     </Typography>
                     <AboutTabs/>
                 </Grid>
