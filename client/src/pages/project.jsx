@@ -24,11 +24,12 @@ export default function Project(){
                             }}
                         />
                     </Grid>
-                    <Grid item md={4} alignSelf='center'>
+                    <Grid item md={4} alignSelf='flex-start'>
                         <Typography variant='h5' fontWeight={600} sx={{color:'#333533'}}>Proer Website UI </Typography>
-                        <Typography sx={{color:'#1f081299', fontSize:14, my:1, mb:2}}>march '23 - april '23</Typography>
+                        <Typography sx={{color:'#1f081299', fontSize:14, mt:1}}>march '23 - april '23</Typography>
+                        <Typography sx={{color:'#1f081299', fontSize:14, mb:2}}>(associated with <span style={{fontWeight:'bold'}}>Aasa Technologies</span>)</Typography>
                         <Typography sx={{color:'#1f0812'}}>
-                            Developed UI for Proer, while @ Aasa Technologies. 
+                            Developed UI for Proer (Employee monitoring software) in wordpress using the elementor plugin.
                         </Typography>
                     </Grid>
                     <Grid item md={4} alignSelf='center'>
@@ -61,11 +62,12 @@ export default function Project(){
                             }}
                         />
                     </Grid>
-                    <Grid item md={4} alignSelf='center'>
+                    <Grid item md={4} alignSelf='flex-start'>
                         <Typography variant='h5' fontWeight={600} sx={{color:'#333533'}}>APIfy</Typography>
-                        <Typography sx={{color:'#1f081299', fontSize:14, my:1, mb:2}}>september '23 - present</Typography>
+                        <Typography sx={{color:'#1f081299', fontSize:14, mt:1}}>september '23 - present</Typography>
+                        <Typography sx={{color:'#1f081299', fontSize:14, mb:2}}>(associated with <span style={{fontWeight:'bold'}}>Personal project</span>)</Typography>
                         <Typography sx={{color:'#1f0812'}}>
-                            A PWA made out of interest of API integration.
+                            A PWA made out of interest of API integration. Combines feeds for news, weather, sports, finance, social & entertainment, thus eliminates need for multiple apps.
                         </Typography>
                     </Grid>
                     <Grid item md={4} alignSelf='center'>

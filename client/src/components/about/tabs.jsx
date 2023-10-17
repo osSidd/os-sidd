@@ -4,6 +4,7 @@ import { Box, Tabs, Tab, Typography, Button, SvgIcon } from "@mui/material";
 import HandymanIcon from '@mui/icons-material/Handyman';
 import SportsSoccerIcon from '@mui/icons-material/SportsSoccer';
 import SchoolIcon from '@mui/icons-material/School';
+import AutoStoriesOutlinedIcon from '@mui/icons-material/AutoStoriesOutlined';
 
 import HtmlIcon from '../../assets/html.svg'
 import CssIcon from '../../assets/css.svg'
@@ -80,9 +81,13 @@ export default function AboutTabs(){
                         <Box component='img' src={code} width={32}/>
                         <Typography sx={{color:'#1f0812'}}>coding</Typography>
                     </Box>
-                    <Box sx={{display:'flex', alignItems:'center', columnGap:2}}>
+                    <Box sx={{display:'flex', alignItems:'center', columnGap:2, mb:2}}>
                         <Box component='img' src={sudoku} width={32} />
                         <Typography sx={{color:'#1f0812'}}>solving sudoku</Typography>
+                    </Box>
+                    <Box sx={{display:'flex', alignItems:'center', columnGap:2, ml:1}}>
+                        <AutoStoriesOutlinedIcon width={32} />
+                        <Typography sx={{color:'#1f0812'}}>reading books</Typography>
                     </Box>
                 </Box>
             </CustomTabPanel>

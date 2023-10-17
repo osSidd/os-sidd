@@ -24,7 +24,7 @@ export default function Contact(){
         <Container id="contact" maxWidth="xl" sx={{minHeight:'90vh', display: 'flex', flexDirection:'column', justifyContent:'center', my:8}}>
             <SubHeading title='Contact me' />            
             <Grid container>
-                <Grid item md={6}>
+                <Grid item md={6} alignSelf='center'>
                 <Typography pr={8} fontSize={18} sx={{color:'#1f0812'}}>
                     Currently looking for any opportunity related to software engineering field. I can join immediately.
                 </Typography>
