@@ -4,21 +4,21 @@ import SubHeading from '../components/subHeading'
 
 export default function Experience(){
 
-    const chipProp = {fontWeight:500, fontSize:16, p:2}
-    const listItemProp = {display:'list-item',fontSize:18, lineHeight: 1.5, fontFamily:'Roboto'}
+    const chipProp = {fontWeight:500, fontSize:16, p:2, backgroundColor:'#b30089', color:'#fefefe'}
+    const listItemProp = {display:'list-item',fontSize:18, lineHeight: 1.5, fontFamily:'Roboto', color:'#1f0812'}
 
     return (
-        <Container id="experience" maxWidth="xl" sx={{minHeight:'90vh', display: 'flex', flexDirection:'column', justifyContent:'center'}}>
+        <Container id="experience" maxWidth="xl" sx={{minHeight:'90vh', display: 'flex', flexDirection:'column', justifyContent:'center', my:8}}>
             <SubHeading title='Experience' />
             <Grid container>
-                <Grid item md={3} pt={4} pl={2}>
-                    <Typography fontSize={18} fontWeight={600}>Aasa Technologies</Typography>
+                <Grid item md={3} pl={2}>
+                    <Typography fontSize={18} sx={{color:'#333533'}} fontWeight={600}>Aasa Technologies</Typography>
                 </Grid>
                 <Grid item md={9}>
                     {/* <Box> */}
                         <Box>
-                            <Typography variant='h5' fontWeight={600} mb={1}>web development intern</Typography>
-                            <Typography fontSize={18} sx={{color:'#555'}}>feb'23 - may'23 (internship)</Typography>
+                            <Typography variant='h5' fontWeight={600} sx={{color:'#333533'}} mb={1}>web development intern</Typography>
+                            <Typography fontSize={18} sx={{color:'#1f081288'}}>feb'23 - may'23 (internship)</Typography>
                         </Box>
                         {/* list of details */}
                         <List sx={{listStyleType: 'disc', pl:2, mt:2}}>
@@ -38,7 +38,7 @@ export default function Experience(){
                         {/* <Box>Logo</Box>
                     </Box> */}
                     <Box>
-                        <Typography fontWeight={600} mt={4}>technologies used:</Typography>
+                        <Typography sx={{color:'#333533'}} fontWeight={600} mt={4}>technologies used:</Typography>
                         <Stack direction="row" gap={2} mt={2}>
                             <Chip label="wordpress" variant='outlined' sx={chipProp}/>
                             <Chip label="react" variant='outlined' sx={chipProp}/>

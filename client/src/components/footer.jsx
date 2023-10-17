@@ -9,10 +9,11 @@ export default function Footer(){
                 sx={{
                     "&::after":{
                         content: '"|"'
-                    }
+                    },
+                    color:'#1f081299'
                 }}
                >Osama Siddiquee </Typography>
-               <Typography>&nbsp;Portfolio {new Date().getFullYear()}</Typography>
+               <Typography sx={{color:'#1f081299'}}>&nbsp;Portfolio {new Date().getFullYear()}</Typography>
             </Box>
            
         </Container>

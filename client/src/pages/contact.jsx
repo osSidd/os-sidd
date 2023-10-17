@@ -7,7 +7,7 @@ export default function Contact(){
 
     const iconProp = {
         fontSize:48,
-        color:'#333',
+        color:'#b30089',
         transition:'transform 0.35s ease-in-out',
         "&:hover":{
             transform:'scale(1.05)'
@@ -21,11 +21,11 @@ export default function Contact(){
     }
 
     return (
-        <Container id="contact" maxWidth="xl" sx={{minHeight:'90vh', display: 'flex', flexDirection:'column', justifyContent:'center'}}>
+        <Container id="contact" maxWidth="xl" sx={{minHeight:'90vh', display: 'flex', flexDirection:'column', justifyContent:'center', my:8}}>
             <SubHeading title='Contact me' />            
-            <Grid container mt={4}>
+            <Grid container>
                 <Grid item md={6}>
-                <Typography pr={8} fontSize={18} sx={{color:'#555'}}>
+                <Typography pr={8} fontSize={18} sx={{color:'#1f0812'}}>
                     Currently looking for any opportunity related to software engineering field. I can join immediately.
                 </Typography>
                     <Box mt={4} ml={12}>
@@ -41,7 +41,7 @@ export default function Contact(){
                     <TextField sx={{width:'100%', mb:2}} variant='outlined' placeholder='Name' />
                     <TextField sx={{width:'100%', mb:2}} placeholder='Email'/>
                     <TextField sx={{width:'100%', mb:4}} multiline rows={4} placeholder='Message'/>
-                    <Button size='large' variant='contained' sx={{textTransform:'capitalize', fontWeight:500, backgroundColor:'#333', "&:hover":{backgroundColor: '#333'}}}>Send Message</Button>
+                    <Button size='large' disableElevation variant='contained' sx={{textTransform:'capitalize', fontWeight:500, backgroundColor:'#b30089', "&:hover":{backgroundColor: '#b30089'}}}>Send Message</Button>
                 </Grid>
             </Grid>
         </Container>

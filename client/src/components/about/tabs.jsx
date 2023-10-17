@@ -26,7 +26,7 @@ export default function AboutTabs(){
 
     const iconProp = {}
     const imgProp = {width:48,}
-    const iconBoxProp = {display:'flex', alignItems:'center', flexWrap:'wrap', columnGap:2, mb:4, pt:2}
+    const iconBoxProp = {display:'flex', alignItems:'center',justifyContent:'center', flexWrap:'wrap', columnGap:2, mb:1, pt:2}
 
     const [value, setValue] = useState(0)
 
@@ -35,7 +35,7 @@ export default function AboutTabs(){
     }
 
     return (
-        <Box sx={{width:"60%"}}>
+        <Box sx={{width:"65%"}}>
             <Box sx={{borderBottom: 1, borderColor:'divider'}}>
                 <Tabs value={value} onChange={handleChange} aria-label="basic-tabs">
                     <Tab label={<CustomTabHeading title="skills" icon={<HandymanIcon/>}/>} {...a11yProps(0)} />
@@ -45,7 +45,6 @@ export default function AboutTabs(){
             </Box>
             <CustomTabPanel value={value} index={0}>
                 <Box>
-                    <Typography fontWeight={600}>front-end</Typography>
                     <Box sx={iconBoxProp}>
                         <Box component='img' src={HtmlIcon} sx={imgProp}/>
                         <Box component='img' src={CssIcon} sx={imgProp}/>
@@ -54,13 +53,11 @@ export default function AboutTabs(){
                         <Box component='img' src={MuiIcon} sx={imgProp}/>
                         <Box component='img' src={TailwindIcon} sx={imgProp}/>
                     </Box>
-                    <Typography fontWeight={600}>back-end</Typography>
                     <Box sx={iconBoxProp}>
                         <Box component='img' src={NodeIcon} sx={imgProp}/>
                         <Box component='img' src={MongoIcon} sx={{...imgProp, width:20}}/>
                         <Box component='img' src={GraphIcon} sx={imgProp}/>
                     </Box>
-                    <Typography fontWeight={600}>other</Typography>
                     <Box sx={iconBoxProp}>
                         <Box component='img' src={WordpressIcon} sx={imgProp}/>
                     </Box>
@@ -68,24 +65,24 @@ export default function AboutTabs(){
             </CustomTabPanel>
             <CustomTabPanel value={value} index={1}>
                 <Box>
-                    <Typography variant="h6">2011 - 2015</Typography>
-                    <Typography sx={{color:'#777', mb:4}}>NSHM Knowledge Campus, Durgapur</Typography>
-                    <Typography fontSize={18}>Pursued B.Tech in Mechanical Engineering.</Typography>
+                    <Typography sx={{color:'#1f0812'}} variant="h6">2011 - 2015</Typography>
+                    <Typography sx={{color:'#1f081288', mb:4}}>NSHM Knowledge Campus, Durgapur</Typography>
+                    <Typography sx={{color:'#1f0812'}} fontSize={18}>Pursued B.Tech in Mechanical Engineering.</Typography>
                 </Box>
             </CustomTabPanel>
             <CustomTabPanel value={value} index={2}>
                 <Box>
                     <Box sx={{display:'flex', alignItems:'center', columnGap:2, mb:2}}>
                         <Box component='img' src={football} width={32}/>
-                        <Typography>watching football</Typography>
+                        <Typography sx={{color:'#1f0812'}}>watching football</Typography>
                     </Box>
                     <Box sx={{display:'flex', alignItems:'center', columnGap:2, mb:2}}>
                         <Box component='img' src={code} width={32}/>
-                        <Typography>coding</Typography>
+                        <Typography sx={{color:'#1f0812'}}>coding</Typography>
                     </Box>
                     <Box sx={{display:'flex', alignItems:'center', columnGap:2}}>
                         <Box component='img' src={sudoku} width={32} />
-                        <Typography>solving sudoku</Typography>
+                        <Typography sx={{color:'#1f0812'}}>solving sudoku</Typography>
                     </Box>
                 </Box>
             </CustomTabPanel>
@@ -95,7 +92,7 @@ export default function AboutTabs(){
 
 function CustomTabHeading({title, icon}){
     return (
-        <Button startIcon={icon}>
+        <Button startIcon={icon} sx={{color:'#1f0812', "&:hover":{backgroundColor:'transparent'}}}>
             {title}
         </Button>
     )
@@ -113,7 +110,7 @@ function CustomTabPanel(props){
             {...others}
         >
             {value === index && (
-                <Box sx={{p:3, minHeight:375}}>
+                <Box sx={{p:3, minHeight:215}}>
                     {children}
                 </Box>
             )}

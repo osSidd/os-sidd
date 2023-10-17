@@ -3,14 +3,14 @@ import { Box, Typography } from "@mui/material"
 export default function SubHeading({title}){
     return (
         <Box
-                mb={4} 
+                mb={8} 
                 position="relative"
                 sx={{
                     "&::after":{
                     content:'""',
                     width:135,
                     height:5,
-                    backgroundColor:'#23c',
+                    backgroundColor:'#b30089',
                     position:'absolute',
                     top:62,    
                     }
@@ -19,7 +19,7 @@ export default function SubHeading({title}){
             <Typography 
                 variant="h3"
                 fontWeight={600} 
-                color="#555"
+                color="#404193"
             >
                 {title}
             </Typography>

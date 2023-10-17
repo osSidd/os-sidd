@@ -18,7 +18,7 @@ import '@fontsource/roboto/700.css';
 
 export default function App(){
   return(
-    <Container>
+    <Container sx={{bgcolor:'#fff'}} maxWidth="lg">
       <Navbar/>
       <Home/>
       <About/>

@@ -1,68 +1,102 @@
 import proer from '../assets/proer.png'
 import apify from '../assets/apify.png'
 
-import {Box, Chip, Container, Grid, Paper, Stack, Typography} from '@mui/material'
+import {Box, Button, Chip, Container, Grid, Paper, Stack, Typography} from '@mui/material'
 import SubHeading from '../components/subHeading'
 
 export default function Project(){
 
-    const chipProp = {p:2, fontSize:16, fontWeight:600, color:'#333'}
+    const chipProp = {p:2, fontSize:16, fontWeight:500, color:'#b30089', borderColor:'#b30089'}
+    const linkBtnProp = {borderRadius:5, borderWidth:1, fontSize:16, textTransform:'capitalize', color:'#404193', borderColor:'#404193', "&:hover":{borderColor:'#404193', backgroundColor:'#404193', color:'#fefefe'}}
 
     return (
-        <Container id="projects" maxWidth="xl" sx={{minHeight:'90vh', display:'flex', alignItems:'center'}}>
+        <Container id="projects" maxWidth="xl" sx={{minHeight:'90vh', display:'flex', alignItems:'center', mt:8, mb:16}}>
             <Box width="100%">
                <SubHeading title='Projects'/>
-                <Box mt={16} mb={12} sx={{display:'flex', alignItems:'center', justifyContent: 'flex-start',}}>
-                <Paper elevation={0} square>
+               <Grid container>
+                    <Grid item md={4}>
                         <Box
                             component="img"
                             src={proer}
                             alt="project"
                             sx={{
-                                width:500
+                                width:300,
                             }}
                         />
-                    </Paper>
-                    <Box mt={4} pl={8} width="100%">
-                        <Typography variant='h4' fontWeight={600} sx={{color:'#333'}}>Proer Website UI </Typography>
-                        <Box mt={2}>
-                            <Typography fontSize={18} sx={{color:'#333'}}>
-                                Developed UI for Proer (Employee Monitoring software), while @ Aasa Technologies. 
-                            </Typography>
-                        </Box>
-                        <Stack direction="row" mt={4} gap={2} sx={{ml:'auto', width:'fit-content'}}>
-                            <Chip label="wordpress" size='medium' variant='outlined' sx={chipProp}/> 
-                            <Chip label="javascript" size='medium' variant='outlined' sx={chipProp} />
-                            <Chip label="css" size='medium' variant='outlined' sx={chipProp}/>
+                    </Grid>
+                    <Grid item md={4} alignSelf='center'>
+                        <Typography variant='h5' fontWeight={600} sx={{color:'#333533'}}>Proer Website UI </Typography>
+                        <Typography sx={{color:'#1f081299', fontSize:14, my:1, mb:2}}>march '23 - april '23</Typography>
+                        <Typography sx={{color:'#1f0812'}}>
+                            Developed UI for Proer, while @ Aasa Technologies. 
+                        </Typography>
+                    </Grid>
+                    <Grid item md={4} alignSelf='center'>
+                        <Stack direction="row" gap={2} justifyContent='center' my={2}>
+                            <Chip label="wordpress" size='small' variant='outlined' sx={chipProp}/> 
+                            <Chip label="javascript" size='small' variant='outlined' sx={chipProp} />
+                            <Chip label="css" size='small' variant='outlined' sx={chipProp}/>
                         </Stack>
-                    </Box>
-                </Box>
-                <Box mt={12} mb={18} sx={{display:'flex', alignItems:'center', justifyContent: 'flex-start',}}>
-                    <Paper elevation={0} square>                    
+                        <Stack direction='row' justifyContent='center' gap={2}>
+                            <Button 
+                                variant='outlined' 
+                                sx={linkBtnProp} 
+                                href='https://proer.io'
+                                rel='noreferrer'
+                                target='_blank'
+                            >
+                                live
+                            </Button>
+                        </Stack>
+                    </Grid>
+               </Grid>
+               <Grid container mt={8}>
+                    <Grid item md={4}>
                         <Box
                             component="img"
                             src={apify}
                             alt="project"
                             sx={{
-                                width:500
+                                width:300,
                             }}
                         />
-                    </Paper>
-                    <Box mt={4} pl={8} width="100%">
-                        <Typography variant='h4' fontWeight={600} sx={{color:'#333'}}>Apify</Typography>
-                        <Box mt={2}>
-                            <Typography sx={{color:'#333'}} fontSize={18}> 
-                                A PWA made out of interest of API integration.
-                            </Typography>
-                        </Box>
-                        <Stack direction="row" mt={4} gap={2} sx={{ml:'auto', width:'fit-content'}}>
-                            <Chip label="react" size='medium' variant='outlined' sx={chipProp}/>
-                            <Chip label="d3.js" size='medium' variant='outlined' sx={chipProp}/>
-                            <Chip label="mui" size='medium' variant='outlined' sx={chipProp}/>
+                    </Grid>
+                    <Grid item md={4} alignSelf='center'>
+                        <Typography variant='h5' fontWeight={600} sx={{color:'#333533'}}>APIfy</Typography>
+                        <Typography sx={{color:'#1f081299', fontSize:14, my:1, mb:2}}>september '23 - present</Typography>
+                        <Typography sx={{color:'#1f0812'}}>
+                            A PWA made out of interest of API integration.
+                        </Typography>
+                    </Grid>
+                    <Grid item md={4} alignSelf='center'>
+                        <Stack direction="row" gap={2} justifyContent='center' my={2}>
+                            <Chip label="react" size='small' variant='outlined' sx={chipProp}/>
+                            <Chip label="d3.js" size='small' variant='outlined' sx={chipProp}/>
+                            <Chip label="mui" size='small' variant='outlined' sx={chipProp}/>
                             {/* <Chip label="api-integration" size='medium' variant='outlined' sx={chipProp}/> */}
                         </Stack>
-                    </Box>
-                </Box>
+                        <Stack direction='row' justifyContent='center' gap={2}>
+                            <Button 
+                                variant='outlined' 
+                                sx={linkBtnProp} 
+                                href='#'
+                                rel='noreferrer'
+                                target='_blank'
+                            >
+                                live
+                            </Button>
+                            <Button 
+                                href='https://github.com/osSidd/Apify'
+                                target='_blank'
+                                rel='noreferrer'
+                                variant='outlined'
+                                sx={linkBtnProp}
+                            >
+                                repo
+                            </Button>
+                        </Stack>
+                    </Grid>
+               </Grid>
             </Box>
         </Container>
     )

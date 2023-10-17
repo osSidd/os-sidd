@@ -9,12 +9,12 @@ export default function Navbar(){
         textTransform: 'capitalize',
         fontSize:18,
         fontWeight:600,
-        color:'#555',
+        color:'#404193',
         letterSpacing: 1,
         transition:'color 0.35s ease-out',
         "&:hover":{
             backgroundColor:'#fefefe',
-            color:'#34c'
+            color:'#b30089'
         },
     }
     const linksProps = {
@@ -24,7 +24,7 @@ export default function Navbar(){
             position: 'absolute',
             bottom:5,
             left:8,
-            backgroundColor: '#34c',
+            backgroundColor: '#b30089',
             width:"0%",
             height:3,
             borderRadius:1,
@@ -55,7 +55,7 @@ export default function Navbar(){
                         <Button 
                             variant='outlined'
                             href='#contact' 
-                            sx={{...btnProps, borderWidth:2, borderColor:'#555', "&:hover":{borderWidth:2, backgroundColor:'#34c', borderColor:'#34c', color:"#fefefe"}}}
+                            sx={{...btnProps,borderRadius:5, borderWidth:2, borderColor:'#404193', "&:hover":{borderWidth:2, backgroundColor:'#b30089', borderColor:'#b30089', color:"#fefefe"}}}
                         >
                             contact me
                         </Button>
