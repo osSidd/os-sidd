@@ -37,7 +37,7 @@ export default function Home(){
                         Osama
                     </Typography>
                     <Typography sx={{fontSize:18, fontWeight:500, color: '#1f081288',}}>
-                        A self taught MERN stack developer, looking for a job in web dev field.
+                        A self taught MERN stack developer, looking for a job in web dev field. Interested in api development and integration projects.
                     </Typography>
                     <Box mt={4}>
                         <Button disableElevation href="#about" size="large" variant="contained" sx={{...btnProps, bgcolor:'#b30089', ...containedBtn}}>learn more</Button>
