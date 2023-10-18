@@ -7,7 +7,7 @@ export default function Contact(){
 
     const iconProp = {
         fontSize:48,
-        color:'#b30089',
+        color:'#404193',
         transition:'transform 0.35s ease-in-out',
         "&:hover":{
             transform:'scale(1.05)'
