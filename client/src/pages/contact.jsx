@@ -21,14 +21,14 @@ export default function Contact(){
     }
 
     return (
-        <Container id="contact" maxWidth="xl" sx={{minHeight:'90vh', display: 'flex', flexDirection:'column', justifyContent:'center', my:8}}>
+        <Container id="contact" maxWidth="xl" sx={{minHeight:'90vh', display: 'flex', flexDirection:'column', justifyContent:'center', my:{xs:10, md:8}}}>
             <SubHeading title='Contact me' />            
             <Grid container>
-                <Grid item md={6} alignSelf='center'>
+                <Grid item xs={12} md={6} alignSelf='center'>
                 <Typography pr={8} fontSize={18} sx={{color:'#1f0812'}}>
                     Currently looking for any opportunity related to software engineering field. I can join immediately.
                 </Typography>
-                    <Box mt={4} ml={12}>
+                    <Box mt={{xs:2, md:4}}>
                         <IconButton sx={iconBtn} href='https://www.linkedin.com/in/osama-siddiquee-5722a1a1' target='_blank'> 
                             <LinkedInIcon sx={iconProp}/>
                         </IconButton>
@@ -37,11 +37,11 @@ export default function Contact(){
                         </IconButton>
                     </Box>
                 </Grid>
-                <Grid item md={6}>
+                <Grid item xs={12} md={6} mt={{xs:6, md:0}}>
                     <TextField sx={{width:'100%', mb:2}} variant='outlined' placeholder='Name' />
                     <TextField sx={{width:'100%', mb:2}} placeholder='Email'/>
                     <TextField sx={{width:'100%', mb:4}} multiline rows={4} placeholder='Message'/>
-                    <Button size='large' disableElevation variant='contained' sx={{textTransform:'capitalize', fontWeight:500, backgroundColor:'#b30089', "&:hover":{backgroundColor: '#b30089'}}}>Send Message</Button>
+                    <Button size='large' disableElevation variant='contained' sx={{textTransform:'capitalize', fontWeight:500,display:'block', m:{xs:'auto', md:0}, width:{xs:'100%', md:'auto'}, backgroundColor:'#b30089', "&:hover":{backgroundColor: '#b30089',}}}>Send Message</Button>
                 </Grid>
             </Grid>
         </Container>

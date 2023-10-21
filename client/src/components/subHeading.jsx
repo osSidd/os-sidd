@@ -20,6 +20,7 @@ export default function SubHeading({title}){
                 variant="h3"
                 fontWeight={600} 
                 color="#404193"
+                fontSize={{xs:42, md: 48}}
             >
                 {title}
             </Typography>

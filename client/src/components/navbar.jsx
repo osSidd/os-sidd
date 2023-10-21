@@ -36,15 +36,15 @@ export default function Navbar(){
     }
 // Implement smooth scrolling with given duration using js
     return(
-        <AppBar sx={{bgcolor:'#fefefe', mt:2}} elevation={false} position='static'>
+        <AppBar sx={{bgcolor:'#fefefe', mt:2}} elevation={0} position='static'>
             <Container maxWidth="xl">
                 <Toolbar>
-                    {/* <Box sx={{display:{xs:'flex', md:'none'}}}>
+                    <Box sx={{display:{xs:'flex', md:'none'}, ml:'auto'}}>
                         <IconButton>
                             <MenuIcon/>
                         </IconButton>
-                    </Box> */}
-                    <Box ml='auto'>
+                    </Box>
+                    <Box ml='auto' sx={{display:{xs:'none', md:'flex'}}}>
                         {
                             pages.map(page => (
                                 <Button key={page} href={`#${page}`} sx={[btnProps, linksProps]}>

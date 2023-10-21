@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Box, Tabs, Tab, Typography, Button, SvgIcon } from "@mui/material";
+import { Box, Tabs, Tab, Typography, Button, SvgIcon, Chip } from "@mui/material";
 
 import HandymanIcon from '@mui/icons-material/Handyman';
 import SportsSoccerIcon from '@mui/icons-material/SportsSoccer';
@@ -26,7 +26,7 @@ import sudoku from '../../assets/sudoku.png'
 export default function AboutTabs(){
 
     const iconProp = {}
-    const imgProp = {width:48,}
+    const imgProp = {width:{xs:42, md:48},}
     const iconBoxProp = {display:'flex', alignItems:'center',justifyContent:'center', flexWrap:'wrap', columnGap:2, mb:1, pt:2}
 
     const [value, setValue] = useState(0)
@@ -36,8 +36,8 @@ export default function AboutTabs(){
     }
 
     return (
-        <Box sx={{width:"65%"}}>
-            <Box sx={{borderBottom: 1, borderColor:'divider'}}>
+        <Box sx={{width:{xs:300, md:420}}}>
+            <Box sx={{borderBottom:1, borderColor:'divider',}}>
                 <Tabs value={value} onChange={handleChange} aria-label="basic-tabs">
                     <Tab label={<CustomTabHeading title="skills" icon={<HandymanIcon/>}/>} {...a11yProps(0)} />
                     <Tab label={<CustomTabHeading title="education" icon={<SchoolIcon/>}/>} {...a11yProps(1)} />
@@ -97,9 +97,7 @@ export default function AboutTabs(){
 
 function CustomTabHeading({title, icon}){
     return (
-        <Button startIcon={icon} sx={{color:'#1f0812', "&:hover":{backgroundColor:'transparent'}}}>
-            {title}
-        </Button>
+        <Chip avatar={icon} sx={{color:'#1f0812', bgcolor:'transparent', "&:hover":{backgroundColor:'transparent'}}} label={title}/>
     )
 }
 
@@ -115,7 +113,7 @@ function CustomTabPanel(props){
             {...others}
         >
             {value === index && (
-                <Box sx={{p:3, minHeight:215}}>
+                <Box sx={{p:3, minHeight:{xs:240, md:215}}}>
                     {children}
                 </Box>
             )}
