@@ -28,9 +28,8 @@ export default function MenuDrawer(){
         color:'#404193',
         fontSize:18,
         textTransform:'capitalize',
-        "&:hover":{
-            color:'#b30089'
-        }
+        width:'100%',
+        justifyContent:'flex-start',
     }
 
     const drawertopSection = [
@@ -50,7 +49,7 @@ export default function MenuDrawer(){
             id:2,
             label:'Projects',
             icon:<WebIcon/>,
-            href:'#project'
+            href:'#projects'
         },
         {
             id:3,
@@ -98,7 +97,13 @@ export default function MenuDrawer(){
             role='presentation'
             onClick={toggleDrawer(anchor, false)}
             onKeyDown={toggleDrawer(anchor, false)}
+            height='100%'
+            display='flex'
+            flexDirection='column'
+            justifyContent='space-between'
+            py={2}
         >
+            <Box>
             <List>
                 {
                     drawertopSection.map(item => (
@@ -130,7 +135,8 @@ export default function MenuDrawer(){
                     ))
                 }
             </List>
-            <Box mt={14}>
+            </Box>
+            <Box>
                 <Typography fontSize='small' textAlign='center'>Osama Siddiquee | Portfolio</Typography>
             </Box>
         </Box>

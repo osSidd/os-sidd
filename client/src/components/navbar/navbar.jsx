@@ -39,10 +39,10 @@ export default function Navbar(){
         <AppBar sx={{bgcolor:'#fefefe', mt:2}} elevation={0} position='static'>
             <Container maxWidth="xl">
                 <Toolbar>
-                    <Box sx={{display:{xs:'flex', md:'none'}, ml:'auto'}}>
+                    <Box sx={{display:{xs:'flex', lg:'none'}, ml:'auto'}}>
                         <MenuDrawer/>
                     </Box>
-                    <Box ml='auto' sx={{display:{xs:'none', md:'flex'}}}>
+                    <Box ml='auto' sx={{display:{xs:'none', lg:'flex'}}}>
                         {
                             pages.map(page => (
                                 <Button key={page} href={`#${page}`} sx={[btnProps, linksProps]}>
@@ -53,7 +53,18 @@ export default function Navbar(){
                         <Button 
                             variant='outlined'
                             href='#contact' 
-                            sx={{...btnProps,borderRadius:5, borderWidth:2, borderColor:'#404193', "&:hover":{borderWidth:2, backgroundColor:'#b30089', borderColor:'#b30089', color:"#fefefe"}}}
+                            sx={{
+                                ...btnProps,
+                                borderRadius:5, 
+                                borderWidth:2, 
+                                borderColor:'#404193', 
+                                "&:hover":{
+                                    borderWidth:2, 
+                                    backgroundColor:'#b30089', 
+                                    borderColor:'#b30089',
+                                    color:"#fefefe"
+                                }
+                            }}
                         >
                             contact me
                         </Button>
