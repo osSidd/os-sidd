@@ -34,7 +34,7 @@ export default function Home(){
                 minHeight:{xs:'40vh', lg:'90vh'}, 
                 display:'flex', 
                 alignItems:'center', 
-                mt:{xs:8, lg:0}
+                mt:{xs:10, lg:0}
             }}>
             <Grid container>
                 <Grid item xs={12} sm={7} alignSelf='center'>

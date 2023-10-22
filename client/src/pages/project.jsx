@@ -9,24 +9,24 @@ export default function Project(){
             id="projects" 
             maxWidth="xl" 
             sx={{
-                minHeight:'90vh', 
+                minHeight:'40vh', 
                 display:'flex', 
                 alignItems:'center', 
-                mt:{xs:10, md:8}, 
-                mb:16
+                mt:{xs:10, lg:8}, 
+                
             }}>
             <Box width="100%">
                <SubHeading title='Projects'/>
                 {
                     data.map(project => (
                         <Grid container mt={{xs:12, md:0}} py={4} key={project.id}>
-                            <Grid item xs={12} md={4}>
+                            <Grid item xs={12} lg={4}>
                                 <ProjectImage project={project}/>
                             </Grid>
-                            <Grid item xs={12} md={4} alignSelf='flex-start' mt={{xs:4, md:0}}>
+                            <Grid item xs={12} lg={4} alignSelf='flex-start' mt={{xs:4, lg:0}}>
                                 <ProjectText project={project}/>
                             </Grid>
-                            <Grid item xs={12} md={4} alignSelf='center'>
+                            <Grid item xs={12} lg={4} alignSelf='center'>
                                 <ProjectChip project={project}/>
                                 <ProjectBtn project={project}/>
                             </Grid>
@@ -45,7 +45,7 @@ function ProjectImage({project}){
             src={project.image}
             alt="project"
             sx={{
-                width:300,
+                width:{xs:'100%', sm:400, lg:300},
             }}
         />
     )

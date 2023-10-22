@@ -8,8 +8,17 @@ import AboutImg from '../assets/aboutImg.png'
 export default function About(){
 
     return(
-        <Container id="about" maxWidth="xl" sx={{minHeight:'90vh', display:'flex', alignItems:'center', mt:{xs:10, md:0}}}>
-            <Grid container direction={{xs:'column-reverse', md:'row'}}>
+        <Container 
+            id="about" 
+            maxWidth="xl" 
+            sx={{
+                minHeight:'40vh', 
+                display:'flex', 
+                alignItems:'center', 
+                mt:{xs:10, lg:8}
+            }}
+        >
+            <Grid container>
                 <Grid item xs={12} md={5} alignSelf='center'>
                     <Box
                        display={{xs:'none', md:'flex'}}
@@ -17,7 +26,7 @@ export default function About(){
                     <Box
                         component="img"
                         src={AboutImg}
-                        width={{xs:200, md:450}}
+                        width={{xs:200, md:300, lg:450}}
                     />
                     </Box>
                 </Grid>

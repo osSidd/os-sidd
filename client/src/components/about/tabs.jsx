@@ -36,7 +36,7 @@ export default function AboutTabs(){
     }
 
     return (
-        <Box sx={{width:{xs:300, md:420}}}>
+        <Box sx={{width:{xs:300, sm:400, md:420}}}>
             <Box sx={{borderBottom:1, borderColor:'divider',}}>
                 <Tabs value={value} onChange={handleChange} aria-label="basic-tabs">
                     <Tab label={<CustomTabHeading title="skills" icon={<HandymanIcon/>}/>} {...a11yProps(0)} />

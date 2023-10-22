@@ -21,7 +21,17 @@ export default function Contact(){
     }
 
     return (
-        <Container id="contact" maxWidth="xl" sx={{minHeight:'90vh', display: 'flex', flexDirection:'column', justifyContent:'center', my:{xs:10, md:8}}}>
+        <Container 
+            id="contact" 
+            maxWidth="xl" 
+            sx={{
+                minHeight:'40vh', 
+                display: 'flex', 
+                flexDirection:'column', 
+                justifyContent:'center', 
+                mt:{xs:14, lg:14}
+            }}
+        >
             <SubHeading title='Contact me' />            
             <Grid container>
                 <Grid item xs={12} md={6} alignSelf='center'>
@@ -29,10 +39,18 @@ export default function Contact(){
                     Currently looking for any opportunity related to software engineering field. I can join immediately.
                 </Typography>
                     <Box mt={{xs:2, md:4}}>
-                        <IconButton sx={iconBtn} href='https://www.linkedin.com/in/osama-siddiquee-5722a1a1' target='_blank'> 
+                        <IconButton 
+                            sx={iconBtn} 
+                            href='https://www.linkedin.com/in/osama-siddiquee-5722a1a1' 
+                            target='_blank'
+                        > 
                             <LinkedInIcon sx={iconProp}/>
                         </IconButton>
-                        <IconButton sx={iconBtn} href='https://github.com/osSidd/' target='_blank'>
+                        <IconButton 
+                            sx={iconBtn} 
+                            href='https://github.com/osSidd/' 
+                            target='_blank'
+                        >
                             <GithubIcon sx={iconProp}/>
                         </IconButton>
                     </Box>
@@ -41,7 +59,22 @@ export default function Contact(){
                     <TextField sx={{width:'100%', mb:2}} variant='outlined' placeholder='Name' />
                     <TextField sx={{width:'100%', mb:2}} placeholder='Email'/>
                     <TextField sx={{width:'100%', mb:4}} multiline rows={4} placeholder='Message'/>
-                    <Button size='large' disableElevation variant='contained' sx={{textTransform:'capitalize', fontWeight:500,display:'block', m:{xs:'auto', md:0}, width:{xs:'100%', md:'auto'}, backgroundColor:'#b30089', "&:hover":{backgroundColor: '#b30089',}}}>Send Message</Button>
+                    <Button 
+                        size='large' 
+                        disableElevation 
+                        variant='contained' 
+                        sx={{
+                            textTransform:'capitalize', 
+                            fontWeight:500,
+                            display:'block', 
+                            m:{xs:'auto', md:0}, 
+                            width:{xs:'100%', md:'auto'}, 
+                            backgroundColor:'#b30089', 
+                            "&:hover":{backgroundColor: '#b30089',}
+                        }}
+                    >
+                        Send Message
+                    </Button>
                 </Grid>
             </Grid>
         </Container>
