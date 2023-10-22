@@ -29,7 +29,7 @@ export default function Experience(){
                 display: 'flex', 
                 flexDirection:'column', 
                 justifyContent:'center', 
-                mt:{xs:10, lg:14}
+                mt:14
             }}
         >
             <SubHeading title='Experience' />

@@ -29,7 +29,7 @@ export default function Contact(){
                 display: 'flex', 
                 flexDirection:'column', 
                 justifyContent:'center', 
-                mt:{xs:14, lg:14}
+                mt:14
             }}
         >
             <SubHeading title='Contact me' />            

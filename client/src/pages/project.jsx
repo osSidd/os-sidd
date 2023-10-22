@@ -19,7 +19,7 @@ export default function Project(){
                <SubHeading title='Projects'/>
                 {
                     data.map(project => (
-                        <Grid container mt={{xs:12, md:0}} py={4} key={project.id}>
+                        <Grid container mt={{xs:12, md:0}} mb={project.id === data.length - 1 ? 0 : 8} key={project.id}>
                             <Grid item xs={12} lg={4}>
                                 <ProjectImage project={project}/>
                             </Grid>
