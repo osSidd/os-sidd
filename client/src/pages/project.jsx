@@ -19,7 +19,7 @@ export default function Project(){
                <SubHeading title='Projects'/>
                 {
                     data.map(project => (
-                        <Grid container mt={{xs:12, md:0}} py={4}>
+                        <Grid container mt={{xs:12, md:0}} py={4} key={project.id}>
                             <Grid item xs={12} md={4}>
                                 <ProjectImage project={project}/>
                             </Grid>
@@ -88,6 +88,7 @@ function ProjectBtn({project}){
                         href={btn.href}
                         rel='noreferrer'
                         target='_blank'
+                        key={btn.id}
                     >
                         {btn.label}
                     </Button>
@@ -110,7 +111,7 @@ function ProjectChip({project}){
         <Stack direction="row" flexWrap='wrap' gap={2} justifyContent='center' my={2}>
             {
                 project.techUsed.map(tech => (
-                    <Chip label={tech} size='small' variant='outlined' sx={chipProp}/> 
+                    <Chip key={tech} label={tech} size='small' variant='outlined' sx={chipProp}/> 
                 ))
             }
         </Stack>

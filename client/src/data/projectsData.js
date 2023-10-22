@@ -12,6 +12,7 @@ export default [
         associatedWith:'Aasa Technologies',
         techUsed:['wordpress','javascript', 'css'],
         btn:[{
+            id:0,
             label:'live',
             href:'https://proer.io'
         }]
@@ -25,10 +26,12 @@ export default [
         associatedWith:'Personal project',
         techUsed:['react','d3', 'mui'],
         btn:[{
+                id:0,
                 label:'live',
                 href:'#'
             },
-            {
+            {  
+                id:1,
                 label:'code',
                 href:'https://github.com/osSidd/Apify'
             }
@@ -43,6 +46,7 @@ export default [
         associatedWith:'portfolio',
         techUsed:['react', 'mui', 'nodeJs'],
         btn:[{
+            id:0,
             label:'live',
             href:'https://portfolio-green-two-40.vercel.app/'
         }]

@@ -1,5 +1,5 @@
 import {AppBar, Box, Button, Container, IconButton, Toolbar} from '@mui/material'
-import MenuIcon from '@mui/icons-material/Menu'
+import MenuDrawer from './drawer'
 
 export default function Navbar(){
 
@@ -40,9 +40,7 @@ export default function Navbar(){
             <Container maxWidth="xl">
                 <Toolbar>
                     <Box sx={{display:{xs:'flex', md:'none'}, ml:'auto'}}>
-                        <IconButton>
-                            <MenuIcon/>
-                        </IconButton>
+                        <MenuDrawer/>
                     </Box>
                     <Box ml='auto' sx={{display:{xs:'none', md:'flex'}}}>
                         {
