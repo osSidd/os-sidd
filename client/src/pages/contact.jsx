@@ -32,12 +32,11 @@ export default function Contact(){
 
     async function handleSubmit(e){
 
-        console.log(formData)
         setSending(true)
         setStatus(false)
 
         e.preventDefault()
-        const res = await fetch('http://localhost:3000', {
+        const res = await fetch(import.meta.env.VITE_URI, {
             method:'POST',
             headers:{
                 "Content-Type": "application/json"
@@ -59,7 +58,6 @@ export default function Contact(){
         }
         const data = await res.json()
         setMessage(data.status)
-        console.log(data)
     }
 
     const iconProp = {
