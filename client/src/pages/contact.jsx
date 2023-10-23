@@ -43,6 +43,7 @@ export default function Contact(){
             },
             body: JSON.stringify(formData)
         })
+        const data = await res.json()
         if(res.ok){
             setSending(false)
             setFormData({
@@ -56,7 +57,6 @@ export default function Contact(){
             setMessage(data.status)
             setStatus(true)
         }
-        const data = await res.json()
         setMessage(data.status)
     }
 
