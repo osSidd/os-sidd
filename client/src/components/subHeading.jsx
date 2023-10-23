@@ -10,7 +10,7 @@ export default function SubHeading({title}){
                     content:'""',
                     width:135,
                     height:5,
-                    backgroundColor:'#b30089',
+                    backgroundColor:'primary.main',
                     position:'absolute',
                     top:62,    
                     }
@@ -19,7 +19,7 @@ export default function SubHeading({title}){
             <Typography 
                 variant="h3"
                 fontWeight={600} 
-                color="#404193"
+                color="text.subheading"
                 fontSize={{xs:42, md: 48}}
             >
                 {title}

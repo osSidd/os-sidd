@@ -8,7 +8,7 @@ export default function Experience(){
         fontWeight:500, 
         fontSize:16, 
         p:2, 
-        backgroundColor:'#b30089', 
+        backgroundColor:'primary.main', 
         color:'#fefefe', 
         width:'fit-content'
     }
@@ -17,7 +17,7 @@ export default function Experience(){
         fontSize:18, 
         lineHeight: 1.5, 
         fontFamily:'Roboto', 
-        color:'#1f0812'
+        color:'text.primary'
     }
 
     return (
@@ -37,7 +37,7 @@ export default function Experience(){
                 <Grid item xs={12} md={3} pl={{xs:0, md:2}}>
                     <Typography 
                         fontSize={18} 
-                        sx={{color:'#333533'}} 
+                        color="text.primary"
                         fontWeight={600}
                     >
                         Aasa Technologies
@@ -48,14 +48,14 @@ export default function Experience(){
                         <Typography 
                             variant='h5' 
                             fontWeight={600} 
-                            sx={{color:'#333533'}} 
+                            color="text.primary"
                             mb={1}
                         >
                             web development intern
                         </Typography>
                         <Typography 
                             fontSize={18} 
-                            sx={{color:'#1f081288'}}
+                            color="text.secondary"
                         >
                             feb'23 - may'23 (internship)
                         </Typography>
@@ -75,7 +75,7 @@ export default function Experience(){
                             </ListItem>
                         </List>
                     <Box>
-                        <Typography sx={{color:'#333533'}} fontWeight={600} mt={4}>technologies used:</Typography>
+                        <Typography color="text.primary" fontWeight={600} mt={4}>technologies used:</Typography>
                         <Stack 
                             direction='row' 
                             flexWrap='wrap' 

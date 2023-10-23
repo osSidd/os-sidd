@@ -32,7 +32,7 @@ export default function About(){
                 </Grid>
                 <Grid item xs={12} md={7}>
                     <SubHeading title='About me' />
-                    <Typography mb={2} sx={{color:'#1f0812'}}>
+                    <Typography mb={2} color="text.primary">
                         Hello!, I am Osama, a developer based in Kolkata, West Bengal. I like to create web applications that are secure, performant and device agnostic.
                     </Typography>
                     <AboutTabs/>

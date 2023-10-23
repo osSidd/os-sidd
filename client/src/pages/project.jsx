@@ -1,7 +1,6 @@
 import data from '../data/projectsData'
 import {Box, Button, Chip, Container, Grid, Stack, Typography} from '@mui/material'
 import SubHeading from '../components/subHeading'
-import { useEffect, useState } from 'react'
 
 export default function Project(){
     
@@ -56,12 +55,12 @@ function ProjectImage({project}){
 function ProjectText({project}){
     return(
         <>
-            <Typography variant='h5' fontWeight={600} sx={{color:'#333533'}}>{project.title}</Typography>
-            <Typography sx={{color:'#1f081299', fontSize:14, mt:1}}>{project.timespan}</Typography>
-            <Typography sx={{color:'#1f081299', fontSize:14, mb:2}}>
+            <Typography variant='h5' fontWeight={600} color="text.primary">{project.title}</Typography>
+            <Typography sx={{color:"text.secondary", fontSize:14, mt:1}}>{project.timespan}</Typography>
+            <Typography sx={{color:"text.secondary", fontSize:14, mb:2}}>
                 (associated with <span style={{fontWeight:'bold'}}>{project.associatedWith}</span>)
             </Typography>
-            <Typography sx={{color:'#1f0812'}}>{project.description}</Typography>
+            <Typography color="text.primary">{project.description}</Typography>
         </>
     )
 }
@@ -72,11 +71,11 @@ function ProjectBtn({project}){
         borderWidth:1, 
         fontSize:16, 
         textTransform:'capitalize', 
-        color:'#404193', 
-        borderColor:'#404193', 
+        color:'link.main', 
+        borderColor:'link.main', 
         "&:hover":{
-            borderColor:'#404193', 
-            backgroundColor:'#404193', 
+            borderColor:'link.main', 
+            backgroundColor:'link.main', 
             color:'#fefefe'
         }
     }
@@ -105,8 +104,8 @@ function ProjectChip({project}){
         p:2, 
         fontSize:16, 
         fontWeight:500, 
-        color:'#b30089', 
-        borderColor:'#b30089'
+        color:'primary.main', 
+        borderColor:'primary.main'
     }
 
     return (

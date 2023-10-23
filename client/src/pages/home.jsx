@@ -10,19 +10,10 @@ export default function Home(){
         textTransform:'capitalize'
     }
 
-    const containedBtn = {
-        "&:hover":{
-        backgroundColor:'#b30089'
-        }
-    }
-
     const outlinedBtn = {
         borderWidth:2,
-        borderColor:'#b30089',
-        color:'#b30089',
         "&:hover":{
-            borderWidth:2,
-            borderColor:'#b30089'     
+            borderWidth:2,  
         }
     }
 
@@ -39,9 +30,9 @@ export default function Home(){
             <Grid container>
                 <Grid item xs={12} sm={7} alignSelf='center'>
                     <Typography 
-                        variant='h2' 
-                        sx={{
-                            color:'#333533', 
+                        variant='h2'
+                        color='text.primary' 
+                        sx={{ 
                             fontWeight:600, 
                             textAlign:{xs:'center', sm:'start'}, 
                             fontSize:{xs:48, md:64}
@@ -51,9 +42,9 @@ export default function Home(){
                         Hey, I'm
                     </Typography>
                     <Typography 
-                        component="h1" 
-                        sx={{
-                            color:'#b30089', 
+                        component="h1"
+                        color='primary' 
+                        sx={{ 
                             textAlign:{xs:'center', sm:'start'}, 
                             fontSize:{xs:72, md:96}
                         }}  
@@ -67,7 +58,7 @@ export default function Home(){
                         sx={{
                             fontSize:18, 
                             fontWeight:500, 
-                            color: '#1f081288', 
+                            color: 'text.secondary', 
                             textAlign:{xs:'center', sm:'start'}
                         }}
                     >
@@ -79,7 +70,7 @@ export default function Home(){
                             href="#about" 
                             size="large" 
                             variant="contained" 
-                            sx={{...btnProps, bgcolor:'#b30089', ...containedBtn}}
+                            sx={{...btnProps,}}
                         >
                             learn more
                         </Button>

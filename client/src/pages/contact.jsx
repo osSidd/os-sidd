@@ -12,7 +12,7 @@ export default function Contact(){
 
     const iconProp = {
         fontSize:48,
-        color:'#404193',
+        color:'link.main',
         transition:'transform 0.35s ease-in-out',
         "&:hover":{
             transform:'scale(1.05)'
@@ -40,7 +40,7 @@ export default function Contact(){
             <SubHeading title='Contact me' />            
             <Grid container>
                 <Grid item xs={12} md={6} alignSelf='center'>
-                <Typography pr={8} fontSize={18} sx={{color:'#1f0812'}}>
+                <Typography pr={8} fontSize={18} color="text.primary">
                     Currently looking for any opportunity related to software engineering field. I can join immediately.
                 </Typography>
                     <Box mt={{xs:2, md:4}}>
@@ -99,8 +99,8 @@ export default function Contact(){
                                 display:'block', 
                                 m:{xs:'auto', md:0}, 
                                 width:{xs:'100%', md:'auto'}, 
-                                backgroundColor: sending ? '#b3008999' : '#b30089', 
-                                "&:hover":{backgroundColor: '#b30089',}
+                                backgroundColor: sending ? 'primary.light' : 'primary.main', 
+                                "&:hover":{backgroundColor: 'primary.light',}
                             }}
                         >
                             {

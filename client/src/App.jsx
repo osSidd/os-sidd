@@ -16,11 +16,8 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 
 
-//Add mailing functionality
 //Adjust the task panel for mobile screens
-//Style the task panel - tab text color, border color
 // responsive behaviour for fold devices
-//customize mui
 
 
 export default function App(){

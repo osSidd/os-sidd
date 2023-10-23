@@ -11,7 +11,7 @@ import PermContactCalendarIcon from '@mui/icons-material/PermContactCalendar';
 import FeedIcon from '@mui/icons-material/Feed';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import EmailIcon from '@mui/icons-material/Email';
+// import EmailIcon from '@mui/icons-material/Email';
 
 
 export default function MenuDrawer(){
@@ -25,7 +25,7 @@ export default function MenuDrawer(){
     }
 
     const btnProps = {
-        color:'#404193',
+        color:'link.main',
         fontSize:18,
         textTransform:'capitalize',
         width:'100%',
@@ -144,7 +144,7 @@ export default function MenuDrawer(){
 
     return (
         <>
-            <MenuIcon onClick={toggleDrawer('left', true)} sx={{fontSize:36, color:'#b30089'}}/>
+            <MenuIcon onClick={toggleDrawer('left', true)} sx={{fontSize:36, color:'primary.main'}}/>
             <Drawer
                 anchor='left'
                 open={state.left}

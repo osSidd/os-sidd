@@ -1,9 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
+import MUIThemeProvider from './themeProvider/themeProvider.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <MUIThemeProvider>
+      <App/>
+    </MUIThemeProvider>
   </React.StrictMode>,
 )

@@ -25,9 +25,16 @@ import sudoku from '../../assets/sudoku.png'
 
 export default function AboutTabs(){
 
-    const iconProp = {}
     const imgProp = {width:{xs:42, md:48},}
-    const iconBoxProp = {display:'flex', alignItems:'center',justifyContent:'center', flexWrap:'wrap', columnGap:2, mb:1, pt:2}
+    const iconBoxProp = {
+        display:'flex', 
+        alignItems:'center',
+        justifyContent:'center', 
+        flexWrap:'wrap', 
+        columnGap:2, 
+        mb:1, 
+        pt:2
+    }
 
     const [value, setValue] = useState(0)
 
@@ -66,28 +73,28 @@ export default function AboutTabs(){
             </CustomTabPanel>
             <CustomTabPanel value={value} index={1}>
                 <Box>
-                    <Typography sx={{color:'#1f0812'}} variant="h6">2011 - 2015</Typography>
-                    <Typography sx={{color:'#1f081288', mb:4}}>NSHM Knowledge Campus, Durgapur</Typography>
-                    <Typography sx={{color:'#1f0812'}} fontSize={18}>Pursued B.Tech in Mechanical Engineering.</Typography>
+                    <Typography color="text.primary" variant="h6">2011 - 2015</Typography>
+                    <Typography sx={{color:"text.secondary", mb:4}}>NSHM Knowledge Campus, Durgapur</Typography>
+                    <Typography color="text.primary" fontSize={18}>Pursued B.Tech in Mechanical Engineering.</Typography>
                 </Box>
             </CustomTabPanel>
             <CustomTabPanel value={value} index={2}>
                 <Box>
                     <Box sx={{display:'flex', alignItems:'center', columnGap:2, mb:2}}>
                         <Box component='img' src={football} width={32}/>
-                        <Typography sx={{color:'#1f0812'}}>watching football</Typography>
+                        <Typography color="text.primary">watching football</Typography>
                     </Box>
                     <Box sx={{display:'flex', alignItems:'center', columnGap:2, mb:2}}>
                         <Box component='img' src={code} width={32}/>
-                        <Typography sx={{color:'#1f0812'}}>coding</Typography>
+                        <Typography color="text.primary">coding</Typography>
                     </Box>
                     <Box sx={{display:'flex', alignItems:'center', columnGap:2, mb:2}}>
                         <Box component='img' src={sudoku} width={32} />
-                        <Typography sx={{color:'#1f0812'}}>solving sudoku</Typography>
+                        <Typography color="text.primary">solving sudoku</Typography>
                     </Box>
                     <Box sx={{display:'flex', alignItems:'center', columnGap:2, ml:1}}>
                         <AutoStoriesOutlinedIcon width={32} />
-                        <Typography sx={{color:'#1f0812'}}>reading books</Typography>
+                        <Typography color="text.primary">reading books</Typography>
                     </Box>
                 </Box>
             </CustomTabPanel>
@@ -97,7 +104,15 @@ export default function AboutTabs(){
 
 function CustomTabHeading({title, icon}){
     return (
-        <Chip avatar={icon} sx={{color:'#1f0812', bgcolor:'transparent', "&:hover":{backgroundColor:'transparent'}}} label={title}/>
+        <Chip 
+            avatar={icon} 
+            sx={{
+                color:'text.primary', 
+                bgcolor:'transparent', 
+                "&:hover":{backgroundColor:'transparent'}
+            }} 
+            label={title}
+        />
     )
 }
 

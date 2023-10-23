@@ -9,12 +9,11 @@ export default function Navbar(){
         textTransform: 'capitalize',
         fontSize:18,
         fontWeight:600,
-        color:'#404193',
+        color:'link.main',
         letterSpacing: 1,
         transition:'color 0.35s ease-out',
         "&:hover":{
             backgroundColor:'#fefefe',
-            color:'#b30089'
         },
     }
     const linksProps = {
@@ -24,7 +23,7 @@ export default function Navbar(){
             position: 'absolute',
             bottom:5,
             left:8,
-            backgroundColor: '#b30089',
+            backgroundColor: 'primary.main',
             width:"0%",
             height:3,
             borderRadius:1,
@@ -57,11 +56,11 @@ export default function Navbar(){
                                 ...btnProps,
                                 borderRadius:5, 
                                 borderWidth:2, 
-                                borderColor:'#404193', 
+                                borderColor:'link.main', 
                                 "&:hover":{
                                     borderWidth:2, 
-                                    backgroundColor:'#b30089', 
-                                    borderColor:'#b30089',
+                                    backgroundColor:'primary.main', 
+                                    borderColor:'primary.main',
                                     color:"#fefefe"
                                 }
                             }}
