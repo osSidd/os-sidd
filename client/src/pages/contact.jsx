@@ -13,6 +13,8 @@ export default function Contact(){
     })
 
     const [sending, setSending] = useState(false)
+    const [message, setMessage] = useState('')
+    const [status, setStatus] = useState(false)
 
     function handleChange(e){
         const {name, value} = e.target
@@ -22,10 +24,17 @@ export default function Contact(){
         }))
     }
 
+    function hideMessage(){
+        setTimeout(() => {
+            setStatus(false)
+        }, 3000)
+    }
+
     async function handleSubmit(e){
 
         console.log(formData)
         setSending(true)
+        setStatus(false)
 
         e.preventDefault()
         const res = await fetch('http://localhost:3000', {
@@ -42,8 +51,14 @@ export default function Contact(){
                 email: '',
                 message: ''
             })
+            setStatus(true)
+            hideMessage()
+        }else{
+            setMessage(data.status)
+            setStatus(true)
         }
         const data = await res.json()
+        setMessage(data.status)
         console.log(data)
     }
 
@@ -99,9 +114,9 @@ export default function Contact(){
                 </Grid>
                 <Grid item xs={12} md={6} mt={{xs:6, md:0}} position='relative'>
                     <form onSubmit={handleSubmit}>
-                        <TextField onChange={handleChange} sx={{width:'100%', mb:2}} variant='outlined' placeholder='Name' name='name'/>
-                        <TextField onChange={handleChange} sx={{width:'100%', mb:2}} placeholder='Email' name='email'/>
-                        <TextField onChange={handleChange} sx={{width:'100%', mb:4}} multiline rows={4} placeholder='Message' name='message'/>
+                        <TextField onChange={handleChange} value={formData.name} sx={{width:'100%', mb:2}} variant='outlined' placeholder='Name' name='name'/>
+                        <TextField onChange={handleChange} value={formData.email} sx={{width:'100%', mb:2}} placeholder='Email' name='email'/>
+                        <TextField onChange={handleChange} value={formData.message} sx={{width:'100%', mb:4}} multiline rows={4} placeholder='Message' name='message'/>
                         <Button 
                             type='submit'
                             size='large' 
@@ -121,6 +136,16 @@ export default function Contact(){
                                 sending ? 'Sending Message' : 'Send Message'
                             }
                         </Button>
+                        <div style={{
+                            color: status ? 'teal' : 'crimson',
+                            display: status ? 'block' : 'none',
+                            fontFamily:'Roboto',
+                            textAlign:'center',
+                            position:'absolute',
+                            width:'100%'
+                        }} >
+                            {message}
+                        </div>
                     </form>
                 </Grid>
             </Grid>

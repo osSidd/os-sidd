@@ -6,11 +6,13 @@ var logger = require('morgan');
 require('dotenv').config();
 const nodemailer = require('nodemailer')
 var cors = require('cors')
+var helmet = require('helmet')
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var app = express();
+app.use(helmet())
 app.use(cors())
 
 // view engine setup
@@ -63,9 +65,10 @@ app.post("/", function (req, res) {
   transporter.sendMail(mailOptions, function (err, data) {
     if (err) {
       console.log("Error " + err);
+      return res.json({status: "Error"})
     } else {
       console.log("Email sent successfully");
-      res.json({ status: "Email sent" });
+      return res.json({ status: "Email sent" });
     }
   });
 
