@@ -1,9 +1,10 @@
 import data from '../data/projectsData'
 import {Box, Button, Chip, Container, Grid, Stack, Typography} from '@mui/material'
 import SubHeading from '../components/subHeading'
+import { useEffect, useState } from 'react'
 
 export default function Project(){
-
+    
     return (
         <Container 
             id="projects" 
@@ -18,6 +19,7 @@ export default function Project(){
             <Box width="100%">
                <SubHeading title='Projects'/>
                 {
+                    data && 
                     data.map(project => (
                         <Grid container mt={{xs:12, md:0}} mb={project.id === data.length - 1 ? 0 : 8} key={project.id}>
                             <Grid item xs={12} lg={4}>

@@ -2,8 +2,50 @@ import {Box, Button, Chip, Container, Grid, IconButton, Stack, TextField, Typogr
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import GithubIcon from '@mui/icons-material/GitHub'
 import SubHeading from '../components/subHeading'
+import { useState } from 'react'
 
 export default function Contact(){
+
+    const [formData, setFormData] = useState({
+        name: '',
+        email:'',
+        message:''
+    })
+
+    const [sending, setSending] = useState(false)
+
+    function handleChange(e){
+        const {name, value} = e.target
+        setFormData(prev => ({
+            ...prev,
+            [name] : value
+        }))
+    }
+
+    async function handleSubmit(e){
+
+        console.log(formData)
+        setSending(true)
+
+        e.preventDefault()
+        const res = await fetch('http://localhost:3000', {
+            method:'POST',
+            headers:{
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(formData)
+        })
+        if(res.ok){
+            setSending(false)
+            setFormData({
+                name: '',
+                email: '',
+                message: ''
+            })
+        }
+        const data = await res.json()
+        console.log(data)
+    }
 
     const iconProp = {
         fontSize:48,
@@ -55,26 +97,31 @@ export default function Contact(){
                         </IconButton>
                     </Box>
                 </Grid>
-                <Grid item xs={12} md={6} mt={{xs:6, md:0}}>
-                    <TextField sx={{width:'100%', mb:2}} variant='outlined' placeholder='Name' />
-                    <TextField sx={{width:'100%', mb:2}} placeholder='Email'/>
-                    <TextField sx={{width:'100%', mb:4}} multiline rows={4} placeholder='Message'/>
-                    <Button 
-                        size='large' 
-                        disableElevation 
-                        variant='contained' 
-                        sx={{
-                            textTransform:'capitalize', 
-                            fontWeight:500,
-                            display:'block', 
-                            m:{xs:'auto', md:0}, 
-                            width:{xs:'100%', md:'auto'}, 
-                            backgroundColor:'#b30089', 
-                            "&:hover":{backgroundColor: '#b30089',}
-                        }}
-                    >
-                        Send Message
-                    </Button>
+                <Grid item xs={12} md={6} mt={{xs:6, md:0}} position='relative'>
+                    <form onSubmit={handleSubmit}>
+                        <TextField onChange={handleChange} sx={{width:'100%', mb:2}} variant='outlined' placeholder='Name' name='name'/>
+                        <TextField onChange={handleChange} sx={{width:'100%', mb:2}} placeholder='Email' name='email'/>
+                        <TextField onChange={handleChange} sx={{width:'100%', mb:4}} multiline rows={4} placeholder='Message' name='message'/>
+                        <Button 
+                            type='submit'
+                            size='large' 
+                            disableElevation 
+                            variant='contained' 
+                            sx={{
+                                textTransform:'capitalize', 
+                                fontWeight:500,
+                                display:'block', 
+                                m:{xs:'auto', md:0}, 
+                                width:{xs:'100%', md:'auto'}, 
+                                backgroundColor: sending ? '#b3008999' : '#b30089', 
+                                "&:hover":{backgroundColor: '#b30089',}
+                            }}
+                        >
+                            {
+                                sending ? 'Sending Message' : 'Send Message'
+                            }
+                        </Button>
+                    </form>
                 </Grid>
             </Grid>
         </Container>
