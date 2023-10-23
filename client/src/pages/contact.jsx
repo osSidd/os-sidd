@@ -1,64 +1,14 @@
-import {Box, Button, Chip, Container, Grid, IconButton, Stack, TextField, Typography} from '@mui/material'
+import {Box, Button, Container, Grid, IconButton, TextField, Typography} from '@mui/material'
+
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import GithubIcon from '@mui/icons-material/GitHub'
 import SubHeading from '../components/subHeading'
-import { useState } from 'react'
+
+import useMessage from '../hooks/useMessage'
 
 export default function Contact(){
 
-    const [formData, setFormData] = useState({
-        name: '',
-        email:'',
-        message:''
-    })
-
-    const [sending, setSending] = useState(false)
-    const [message, setMessage] = useState('')
-    const [status, setStatus] = useState(false)
-
-    function handleChange(e){
-        const {name, value} = e.target
-        setFormData(prev => ({
-            ...prev,
-            [name] : value
-        }))
-    }
-
-    function hideMessage(){
-        setTimeout(() => {
-            setStatus(false)
-        }, 3000)
-    }
-
-    async function handleSubmit(e){
-
-        setSending(true)
-        setStatus(false)
-
-        e.preventDefault()
-        const res = await fetch(import.meta.env.VITE_URI, {
-            method:'POST',
-            headers:{
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(formData)
-        })
-        const data = await res.json()
-        if(res.ok){
-            setSending(false)
-            setFormData({
-                name: '',
-                email: '',
-                message: ''
-            })
-            setStatus(true)
-            hideMessage()
-        }else{
-            setMessage(data.status)
-            setStatus(true)
-        }
-        setMessage(data.status)
-    }
+    const {message, status, formData, sending, handleChange, handleSubmit} = useMessage()
 
     const iconProp = {
         fontSize:48,
@@ -112,9 +62,32 @@ export default function Contact(){
                 </Grid>
                 <Grid item xs={12} md={6} mt={{xs:6, md:0}} position='relative'>
                     <form onSubmit={handleSubmit}>
-                        <TextField onChange={handleChange} value={formData.name} sx={{width:'100%', mb:2}} variant='outlined' placeholder='Name' name='name'/>
-                        <TextField onChange={handleChange} value={formData.email} sx={{width:'100%', mb:2}} placeholder='Email' name='email'/>
-                        <TextField onChange={handleChange} value={formData.message} sx={{width:'100%', mb:4}} multiline rows={4} placeholder='Message' name='message'/>
+                        <TextField 
+                            onChange={handleChange} 
+                            value={formData.name} 
+                            sx={{width:'100%', mb:2}} 
+                            variant='outlined' 
+                            placeholder='Name' 
+                            name='name'
+                        />
+                        <TextField 
+                            onChange={handleChange} 
+                            value={formData.email} 
+                            sx={{width:'100%', mb:2}} 
+                            variant='outlined'
+                            placeholder='Email' 
+                            name='email'
+                        />
+                        <TextField 
+                            onChange={handleChange} 
+                            value={formData.message} 
+                            sx={{width:'100%', mb:4}}
+                            variant='outlined' 
+                            multiline 
+                            rows={4} 
+                            placeholder='Message' 
+                            name='message'
+                        />
                         <Button 
                             type='submit'
                             size='large' 
@@ -140,6 +113,7 @@ export default function Contact(){
                             fontFamily:'Roboto',
                             textAlign:'center',
                             position:'absolute',
+                            bottom:'-5px',
                             width:'100%'
                         }} >
                             {message}

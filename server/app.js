@@ -3,13 +3,11 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+
 require('dotenv').config();
 const nodemailer = require('nodemailer')
 var cors = require('cors')
 var helmet = require('helmet')
-
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
 
 var app = express();
 app.use(helmet())
@@ -35,31 +33,26 @@ let transporter = nodemailer.createTransport({
     err ? console.log(err) : console.log('server is ready to take messages')
  })
 
-
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// app.use('/', indexRouter);
-// app.use('/users', usersRouter);
-
 app.post("/", function (req, res) {
   let mailOptions = {
     from: req.body.email,
     to: process.env.EMAIL,
-    subject: "Nodemailer API",
+    subject: "Message from your portfolio",
     text: req.body.message,
     html: `
             <div>
               <h2>name: ${req.body.name}</h2>
-              <p>email: ${req.body.email}</p>
-              <p>message: ${req.body.message}</p>
-            </div>
-    
+              <p><stron>email:</strong>: ${req.body.email}</p>
+              <p><strong>message:</strong></p>
+              <p> ${req.body.message}</p>
+            </div>   
           `
-
   };
  
   transporter.sendMail(mailOptions, function (err, data) {
