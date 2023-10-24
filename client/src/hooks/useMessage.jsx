@@ -32,7 +32,7 @@ export default function useMessage(){
         setStatus(false)
 
         e.preventDefault()
-
+        
         const res = await fetch(import.meta.env.VITE_URI, 
             {
                 method:'POST',

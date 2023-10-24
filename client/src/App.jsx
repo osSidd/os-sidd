@@ -15,6 +15,8 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 
+import ErrorBoundary from "./error/errorBoundary";
+
 
 //Adjust the task panel for mobile screens
 // responsive behaviour for fold devices
@@ -22,13 +24,15 @@ import '@fontsource/roboto/700.css';
 
 export default function App(){
   return(
-    <Container sx={{bgcolor:'#fff'}} maxWidth="lg">
+    <Container maxWidth="lg">
       <Navbar/>
       <Home/>
       <About/>
       <Project/>
       <Experience/>
-      <Contact/>
+      <ErrorBoundary>
+        <Contact/>
+      </ErrorBoundary>
       <Footer/>
     </Container>
   )

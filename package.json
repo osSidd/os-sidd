@@ -1,5 +1,7 @@
 {
+    "name":"portfolio",
     "scripts": {
-        "client": "cd client && npm run dev"
+        "client": "cd client && npm run dev",
+        "server": "cd server && npm run devStart"
     }
 }

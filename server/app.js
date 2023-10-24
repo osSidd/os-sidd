@@ -11,7 +11,6 @@ var helmet = require('helmet')
 
 var app = express();
 app.use(helmet())
-app.use(cors())
 
 // view engine setup
 //app.set('views', path.join(__dirname, 'views'));
@@ -39,18 +38,25 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+const corsOption ={
+  origin: process.env.CORS_ORIGIN,
+  methods:'POST,',
+  optionsSuccessStatus: 200
+}
+
+app.use(cors(corsOption))
+
 app.post("/", function (req, res) {
   let mailOptions = {
-    from: req.body.email,
+    from: process.env.EMAIL,
     to: process.env.EMAIL,
-    subject: "Message from your portfolio",
+    subject: `Message from ${req.body.name} via your portfolio`,
     text: req.body.message,
     html: `
             <div>
-              <h2>name: ${req.body.name}</h2>
-              <p><stron>email:</strong>: ${req.body.email}</p>
-              <p><strong>message:</strong></p>
-              <p> ${req.body.message}</p>
+              <div>name: <h2>${req.body.name}</h2></div>
+              <p><strong>email:</strong> ${req.body.email}</p>
+              <p><strong>message:</strong> ${req.body.message}</p>
             </div>   
           `
   };
