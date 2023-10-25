@@ -13,6 +13,7 @@ export default function Navbar(){
         letterSpacing: 1,
         transition:'color 0.35s ease-out',
         "&:hover":{
+            color:'primary.main',
             backgroundColor:'#fefefe',
         },
     }
