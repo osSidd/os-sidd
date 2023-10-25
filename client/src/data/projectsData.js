@@ -25,13 +25,14 @@ export default [
         timespan:"september '23 - present",
         associatedWith:'Personal project',
         techUsed:['react','d3', 'mui'],
-        btn:[{
-                id:0,
-                label:'live',
-                href:'#'
-            },
+        btn:[
+            // {
+            //     id:0,
+            //     label:'live',
+            //     href:'#'
+            // },
             {  
-                id:1,
+                id:0,
                 label:'code',
                 href:'https://github.com/osSidd/Apify'
             }
