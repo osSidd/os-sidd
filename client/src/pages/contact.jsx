@@ -69,6 +69,7 @@ export default function Contact(){
                             variant='outlined' 
                             placeholder='Name' 
                             name='name'
+                            required
                         />
                         <TextField 
                             onChange={handleChange} 
@@ -77,6 +78,7 @@ export default function Contact(){
                             variant='outlined'
                             placeholder='Email' 
                             name='email'
+                            required
                         />
                         <TextField 
                             onChange={handleChange} 
@@ -87,6 +89,7 @@ export default function Contact(){
                             rows={4} 
                             placeholder='Message' 
                             name='message'
+                            required
                         />
                         <Button 
                             type='submit'
