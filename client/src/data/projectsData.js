@@ -1,8 +1,9 @@
 import proer from '../assets/proer.png'
-import apify from '../assets/apify.png'
+// import apify from '../assets/apify.png'
 import falcone from '../assets/falcone.png'
 import teerex from '../assets/teerex.png'
 import portfolio from '../assets/portfolio.png'
+import nintendo from '../assets/nintendo.png'
 
 export default [
     {
@@ -21,22 +22,21 @@ export default [
     },
     {
         id:1,
-        image:falcone,
-        title:'Finding Falcone',
-        description:'Finding Falcone is a Geektrust front-end coding challenge, where a user needs to select 4 planets out of 6 and assign provided space vehicles to search for Queen Falcone. Upon selecting planets and assigning vehicles the user can view the result (a game of chance) provided by an api.',
-        timespan:"november '23 - november '23",
-        associatedWith:'Geektrust Coding Challenge',
-        techUsed:['react','scss', 'typescript', 'webpack'],
-        btn:[
-            {
+        image:nintendo,
+        title:'Nintendo Product Page',
+        description:"A landing page, a Frontend Practice level 3 project inspired from Nintendo's product page.",
+        timespan:"January '24 - present",
+        associatedWith:'Landing Page',
+        techUsed:['react', 'tailwindCSS'],
+        btn:[{
                 id:0,
                 label:'live',
-                href:'https://finding-falcone-teal.vercel.app/'
+                href:'https://nintendo-product-page.vercel.app/'
             },
-            {  
-                id:1,
-                label:'code',
-                href:'https://github.com/osSidd/findingFalcone'
+            {
+                id: 1,
+                label: 'code',
+                href: 'https://github.com/osSidd/Nintendo-Product-Page'
             }
         ]
     },
@@ -63,17 +63,24 @@ export default [
     },
     {
         id:3,
-        image:portfolio,
-        title:'Portfolio',
-        description:"I required a Portfolio to demonstrate my web development projects and skills. It's simple but gets the job done.",
-        timespan:"october '23 - october '23",
-        associatedWith:'portfolio',
-        techUsed:['react', 'mui', 'nodeJs'],
-        btn:[{
-            id:0,
-            label:'live',
-            href:'https://portfolio-green-two-40.vercel.app/'
-        }]
+        image:falcone,
+        title:'Finding Falcone',
+        description:'Finding Falcone is a Geektrust front-end coding challenge, where a user needs to select 4 planets out of 6 and assign provided space vehicles to search for Queen Falcone. Upon selecting planets and assigning vehicles the user can view the result (a game of chance) provided by an api.',
+        timespan:"november '23 - november '23",
+        associatedWith:'Geektrust Coding Challenge',
+        techUsed:['react','scss', 'typescript', 'webpack'],
+        btn:[
+            {
+                id:0,
+                label:'live',
+                href:'https://finding-falcone-teal.vercel.app/'
+            },
+            {  
+                id:1,
+                label:'code',
+                href:'https://github.com/osSidd/findingFalcone'
+            }
+        ]
     },
     // {
     //     id:0,

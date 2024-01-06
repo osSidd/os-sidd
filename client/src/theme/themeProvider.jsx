@@ -12,7 +12,7 @@ const theme = createTheme({
         },
         link: {
             main:'#404193'
-        }
+        },
     }
 })
 
