@@ -104,27 +104,6 @@ export default [
             }
         ]
     },
-    {
-        id:3,
-        image:form,
-        title:'Form builder',
-        description:'A form builder using MERN stack, featuring question types like Categorize, Cloze and Comprehension.',
-        timespan:"december '23 - January '24",
-        associatedWith:'Personal project',
-        techUsed:['react','tailwindCSS', 'nodeJs', 'MongoDB'],
-        btn:[
-            {
-                id:0,
-                label:'live',
-                href:'https://form-builder-ochre.vercel.app/'
-            },
-            {  
-                id:1,
-                label:'code',
-                href:'https://github.com/osSidd/formBuilder'
-            }
-        ]
-    },
     // {
     //     id:0,
     //     image:proer,
