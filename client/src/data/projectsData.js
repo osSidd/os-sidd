@@ -2,8 +2,9 @@ import proer from '../assets/proer.png'
 // import apify from '../assets/apify.png'
 import falcone from '../assets/falcone.png'
 import teerex from '../assets/teerex.png'
-import portfolio from '../assets/portfolio.png'
+// import portfolio from '../assets/portfolio.png'
 import nintendo from '../assets/nintendo.png'
+import form from '../assets/form.png'
 
 export default [
     {
@@ -42,6 +43,27 @@ export default [
     },
     {
         id:2,
+        image:form,
+        title:'Form builder',
+        description:'A form builder using MERN stack, featuring question types like Categorize, Cloze and Comprehension.',
+        timespan:"december '23 - January '24",
+        associatedWith:'Personal project',
+        techUsed:['react','tailwindCSS', 'nodeJs', 'MongoDB'],
+        btn:[
+            {
+                id:0,
+                label:'live',
+                href:'https://form-builder-ochre.vercel.app/'
+            },
+            {  
+                id:1,
+                label:'code',
+                href:'https://github.com/osSidd/formBuilder'
+            }
+        ]
+    },
+    {
+        id:3,
         image:teerex,
         title:'TeeRex Store',
         description:'TeeRex Store is a Geektrust front-end coding challenge, which demonstrates a very basic e-commerce product listing page.',
@@ -62,7 +84,7 @@ export default [
         ]
     },
     {
-        id:3,
+        id:4,
         image:falcone,
         title:'Finding Falcone',
         description:'Finding Falcone is a Geektrust front-end coding challenge, where a user needs to select 4 planets out of 6 and assign provided space vehicles to search for Queen Falcone. Upon selecting planets and assigning vehicles the user can view the result (a game of chance) provided by an api.',
@@ -79,6 +101,27 @@ export default [
                 id:1,
                 label:'code',
                 href:'https://github.com/osSidd/findingFalcone'
+            }
+        ]
+    },
+    {
+        id:3,
+        image:form,
+        title:'Form builder',
+        description:'A form builder using MERN stack, featuring question types like Categorize, Cloze and Comprehension.',
+        timespan:"december '23 - January '24",
+        associatedWith:'Personal project',
+        techUsed:['react','tailwindCSS', 'nodeJs', 'MongoDB'],
+        btn:[
+            {
+                id:0,
+                label:'live',
+                href:'https://form-builder-ochre.vercel.app/'
+            },
+            {  
+                id:1,
+                label:'code',
+                href:'https://github.com/osSidd/formBuilder'
             }
         ]
     },
