@@ -7,20 +7,20 @@ import nintendo from '../assets/nintendo.png'
 import form from '../assets/form.png'
 
 export default [
-    {
-        id:0,
-        image:proer,
-        title:'Proer Website UI',
-        description:'Developed UI for Proer (Employee monitoring software) in wordpress using the elementor plugin, according to the given design.',
-        timespan:"march '23 - april '23",
-        associatedWith:'Aasa Technologies',
-        techUsed:['wordpress','javascript', 'css'],
-        btn:[{
-            id:0,
-            label:'live',
-            href:'https://proer.io'
-        }]
-    },
+    // {
+    //     id:0,
+    //     image:proer,
+    //     title:'Proer Website UI',
+    //     description:'Developed UI for Proer (Employee monitoring software) in wordpress using the elementor plugin, according to the given design.',
+    //     timespan:"march '23 - april '23",
+    //     associatedWith:'Aasa Technologies',
+    //     techUsed:['wordpress','javascript', 'css'],
+    //     btn:[{
+    //         id:0,
+    //         label:'live',
+    //         href:'https://proer.io'
+    //     }]
+    // },
     {
         id:1,
         image:nintendo,
