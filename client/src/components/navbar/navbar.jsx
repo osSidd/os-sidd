@@ -1,14 +1,17 @@
-import {AppBar, Box, Button, Container, IconButton, Toolbar} from '@mui/material'
+import {AppBar, Box, Button, Container, Toolbar} from '@mui/material'
 import MenuDrawer from './drawer'
+import { useEffect, useState } from 'react'
 
 export default function Navbar(){
+
+    const [elevation, setElevation] = useState(0)
 
     const pages = ['home', 'about', 'projects', 'experience']
     const btnProps = {
         ml: 2,
         textTransform: 'capitalize',
-        fontSize:18,
-        fontWeight:600,
+        fontSize:16,
+        fontWeight:400,
         color:'link.main',
         letterSpacing: 1,
         transition:'color 0.35s ease-out',
@@ -26,7 +29,7 @@ export default function Navbar(){
             left:8,
             backgroundColor: 'primary.main',
             width:"0%",
-            height:3,
+            height:2,
             borderRadius:1,
             transition:'width 0.35s ease-out'
         },
@@ -34,9 +37,33 @@ export default function Navbar(){
             width:'90%', 
         }   
     }
+
+    useEffect(() => {
+        window.addEventListener('scroll', debounce(elevate, 100))
+    }, [])
+
+    console.log('state')
+
+    function elevate(){
+        if(window.scrollY > 0)
+            setElevation(2)
+        else
+            setElevation(0)
+    }
+
+    function debounce(fn, delay){
+        let timer;
+        return () => {
+            clearTimeout(timer)
+            timer = setTimeout(() => {
+                fn.call(this, arguments)
+            }, delay)
+        }
+    }
+
 // Implement smooth scrolling with given duration using js
     return(
-        <AppBar sx={{bgcolor:'#fefefe', mt:2}} elevation={0} position='static'>
+        <AppBar sx={{bgcolor:'#fefefe', paddingY:1, top:0,}} elevation={elevation} position='fixed'>
             <Container maxWidth="xl">
                 <Toolbar>
                     <Box sx={{display:{xs:'flex', lg:'none'}, ml:'auto'}}>
@@ -51,15 +78,19 @@ export default function Navbar(){
                             ))
                         }
                         <Button 
+                            href='https://os-writings.vercel.app/' 
+                            sx={[btnProps, linksProps]}
+                        >
+                            blog
+                        </Button>
+                        <Button 
                             variant='outlined'
                             href='#contact' 
                             sx={{
                                 ...btnProps,
                                 borderRadius:5, 
-                                borderWidth:2, 
                                 borderColor:'link.main', 
                                 "&:hover":{
-                                    borderWidth:2, 
                                     backgroundColor:'primary.main', 
                                     borderColor:'primary.main',
                                     color:"#fefefe"
