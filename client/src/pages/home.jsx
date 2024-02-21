@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 
 export default function Home(){
 
-    const text = 'Osama'
-    const [message, setMessage] = useState('')
+    // const text = 'Osama'
+    // const [message, setMessage] = useState('')
 
     const btnProps = {
         mr:2,
@@ -22,16 +22,7 @@ export default function Home(){
     }
 
     // useEffect(() => {
-    //     let index = 0
-    //     const id = setInterval(() => {
-    //         setMessage(prev => {return prev === text ? '' : prev + text[index]})
-    //         if(index >= text.length - 1) index = 0
-    //             else index++
-    //     }, 500);
-
-    //     return () => {
-    //         clearInterval(id)
-    //     }
+       
     // }, [])
 // console.log(index)
     return(
@@ -69,7 +60,7 @@ export default function Home(){
                             variant="h1" 
                             fontWeight={700}
                     >
-                        {message}
+                        Osama
                     </Typography>
                     <Typography 
                         sx={{

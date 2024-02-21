@@ -87,7 +87,7 @@ export default function MenuDrawer(){
             id:2,
             label:'Blog',
             icon:<FeedIcon/>,
-            href:'#',
+            href:'https://os-writings.vercel.app/',
         },
     ]
 
