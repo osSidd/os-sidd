@@ -1,7 +1,11 @@
 import { Box, Button, Container, Grid, Stack, Typography } from "@mui/material";
 import HeroImg from '../assets/heroImg.png'
+import { useEffect, useState } from "react";
 
 export default function Home(){
+
+    const text = 'Osama'
+    const [message, setMessage] = useState('')
 
     const btnProps = {
         mr:2,
@@ -17,6 +21,19 @@ export default function Home(){
         }
     }
 
+    // useEffect(() => {
+    //     let index = 0
+    //     const id = setInterval(() => {
+    //         setMessage(prev => {return prev === text ? '' : prev + text[index]})
+    //         if(index >= text.length - 1) index = 0
+    //             else index++
+    //     }, 500);
+
+    //     return () => {
+    //         clearInterval(id)
+    //     }
+    // }, [])
+// console.log(index)
     return(
         <Container 
             id="home" 
@@ -52,7 +69,7 @@ export default function Home(){
                             variant="h1" 
                             fontWeight={700}
                     >
-                        Osama
+                        {message}
                     </Typography>
                     <Typography 
                         sx={{
@@ -62,7 +79,7 @@ export default function Home(){
                             textAlign:{xs:'center', sm:'start'}
                         }}
                     >
-                        A self taught MERN stack developer, looking for a job in web dev field. Interested in api development and integration projects.
+                        A self taught MERN stack developer with a background in Mechanical engineering. Loves problem solving and developing solutions from scratch via code and engineering principles. 
                     </Typography>
                     <Stack direction={{xs:'column', sm:'row'}} px={{xs:8, sm:0}} rowGap={{xs:2, md:0}} mt={4}>
                         <Button 

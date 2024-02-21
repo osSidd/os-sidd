@@ -144,7 +144,7 @@ export default function MenuDrawer(){
 
     return (
         <>
-            <MenuIcon onClick={toggleDrawer('left', true)} sx={{fontSize:36, color:'primary.main'}}/>
+            <MenuIcon onClick={toggleDrawer('left', true)} sx={{fontSize:36, color:'primary.main', cursor:'pointer'}}/>
             <Drawer
                 anchor='left'
                 open={state.left}
